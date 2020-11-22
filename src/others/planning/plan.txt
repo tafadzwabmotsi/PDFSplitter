@@ -1,0 +1,47 @@
+Requirements
+============
+
+First
+=====
+- We want to be able to drag and drop a PDF document
+- Let the user input the range of pages they want to split
+- Split and return the splitted document
+- Allow the user to store the resulted file to the location of their choice
+
+Splitting
+=========
+   1. Split all pages, and name them as nameOfPDFFile_page_1.pdf, nameOfPDFFile_page_2.pdf, ...., nameOfPDFFile_page_n.pdf
+   2. Split the file as range of pages, of the user has to provide. Name the file as nameOfPDFFile_pages_y-z.pdf
+
+Gui
+===
+- Need to have a drag area to allows user drag a PDF file
+- On dropping the file, pop up the options menu:
+    - Split as range
+    - Split into all pages
+- On click split all pages:
+    - Open file chooser to store location
+    - Have a progress during splitting
+
+- On click split range:
+    - Open a small window to input the range
+    1. input fields
+    2. Ok buttton
+
+    - On click Ok button:
+        - have a progress bar during splitting
+
+- Validating the text fields
+    1. Check if all the text fields are non empty
+    2. Check if they all contain integer values
+    3. Check if from page value is lesser than to page value
+        - If all the three conditions are met
+              1. Get the values of the text fields
+              2. Begin verifying of the range given is valid to the given PDF file
+
+
+- Working of splitting tasks/threads
+    - All pages
+    - Range splitting
+
+-

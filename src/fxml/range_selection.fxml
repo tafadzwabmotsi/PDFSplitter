@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uis.RangeSelection">
+   <children>
+      <ImageView fitHeight="200.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../others/images/sun_set_impala_range_selection.png" />
+         </image></ImageView>
+      <VBox fx:id="containerVBox" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseDragged="#containerVBoxOnMouseDraggedHandler" onMousePressed="#containerVBoxOnMousePressedHandler" prefHeight="200.0" prefWidth="600.0">
+         <children>
+            <HBox fx:id="topBarHBox" alignment="CENTER_RIGHT" onMouseDragged="#topBarHBoxOnMouseDraggedHandler" onMousePressed="#topBarHBoxOnMousePressedEventHandler" prefHeight="50.0" prefWidth="600.0">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="60.0" onMouseClicked="#closeButtonOnMouseClickedHandler" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../others/images/Delete_16px.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets right="5.0" top="-5.0" />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin></HBox>
+            <HBox alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" onMouseDragged="#fromPageHBoxOnMouseDraggedHandler" onMousePressed="#fromPageHBoxOnMousePressedHandler" prefHeight="60.0" prefWidth="600.0">
+               <children>
+                  <Label text="From page">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="fromPageTextField" prefHeight="30.0" prefWidth="120.0">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets right="50.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" onMouseDragged="#toPageHBoxOnMouseDraggedHandler" onMousePressed="#toPageHBoxOnMousePressedHandler" prefHeight="60.0" prefWidth="600.0">
+               <children>
+                  <Label text="To page">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="toPageTextField" prefHeight="30.0" prefWidth="120.0">
+                     <HBox.margin>
+                        <Insets right="35.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" onMouseDragged="#bottomHBoxOnMouseDraggedHandler" onMousePressed="#bottomHBoxOnMousePressedHandler" prefHeight="60.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="35.0" fitWidth="58.0" onMouseClicked="#backButtonOMouseClickedHandler" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../others/images/Circled%20Left%202_32px_1.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="okButton" fitHeight="35.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../others/images/Checkmark_32px.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="300.0" />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</StackPane>
